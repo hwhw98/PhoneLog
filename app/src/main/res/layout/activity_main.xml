@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/purple_700"
+        app:title="통화기록 지우기"
+        app:titleTextColor="@color/white">
+        <ImageButton
+            android:id="@+id/helpBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="fitCenter"
+            android:layout_gravity="right"
+            android:layout_margin="10dp"
+            android:src="@drawable/help_image"
+            android:background="#00000000"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="지우고 싶은 번호의 일부를 입력하세요."
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/ten_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="10개 이하의 번호를 가져옵니다."
+        android:textSize="15sp"/>
+
+    <EditText
+        android:id="@+id/delete_text"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="10dp" />
+
+    <LinearLayout
+        android:id="@+id/delete_conteiner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:gravity="center"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/send_num"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:text="번호 목록 가져오기"
+            android:textSize="15sp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/delete_all"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:onClick="deleteNum"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:layout_margin="5dp"
+            android:text="아래 번호들 통화 기록에서 모두 삭제"
+            android:textColor="@color/white"
+            android:background="@color/purple_200"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:choiceMode="multipleChoice"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/delete_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="선택 번호들 목록에서 제거"
+            android:layout_weight="1"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </LinearLayout>
+</LinearLayout>
