@@ -95,7 +95,6 @@ public class MainActivity extends AppCompatActivity {
 
         ListView listView = (ListView) findViewById(R.id.listView);
 
-        // Create adapter and set it to listView
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_multiple_choice, numList);
         listView.setAdapter(adapter);
 
